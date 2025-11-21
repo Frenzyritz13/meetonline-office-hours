@@ -12,7 +12,7 @@ function setupRootHandlers(app) {
  * @param {Express.Response} res
  */
 function rootHandler(req, res) {
-    return res.json({ ok: true, message: "Server is running" });
+    res.json({ ok: true, message: "Server is running" });
 }
 
 export { setupRootHandlers };

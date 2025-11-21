@@ -56,6 +56,7 @@ buildup() {
         }
 
         docker build \
+            --progress=plain \
             --no-cache \
             --tag localhost/meetonline-database:manual \
             --file database/manual.Dockerfile database
@@ -69,6 +70,7 @@ buildup() {
         }
 
         docker build \
+            --progress=plain \
             --tag localhost/meetonline-server:manual \
             --file server/node-server-app/manual.Dockerfile server/node-server-app/
 
@@ -82,6 +84,7 @@ buildup() {
         }
 
         docker build \
+            --progress=plain \
             --build-arg ENV_FILE=local.env \
             --tag localhost/meetonline-client:manual \
             --file client/react-client-app/manual.Dockerfile client/react-client-app/

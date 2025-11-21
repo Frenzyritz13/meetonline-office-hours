@@ -28,6 +28,13 @@ class KVStoreModel {
         instance.value = row.v;
         return instance;
     }
+
+    static toDatabaseFormat(model) {
+        return {
+            k: model.key,
+            v: model.value
+        };
+    }
 }
 
 export { KVStoreModel };

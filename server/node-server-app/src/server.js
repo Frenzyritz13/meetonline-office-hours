@@ -24,7 +24,6 @@ import { setupDirectories } from "./utils/fs.js";
 import { loadEnv } from "./utils/env.js";
 import { projectRoot } from "./utils/projectRoot.js";
 import { dbStart } from "./database/db.js";
-import { setupUserProfileHandler } from "./handlers/userProfileHandler.js";
 
 const app = express();
 const cookieParser = cookieParserPkg.default;
@@ -52,7 +51,6 @@ setupRootHandlers(app);
 setupAuthHandlers(app);
 setupUploadHandler(app);
 setupUserAccountHandler(app);
-setupUserProfileHandler(app);
 
 /* Setting up Servers */
 const { SERVER_HTTP_PORT, SERVER_HTTPS_PORT } = process.env;
