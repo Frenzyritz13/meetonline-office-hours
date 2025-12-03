@@ -1,4 +1,4 @@
-# meetonline
+# meetonline - office hours demo
 
 An app to let you build and find online communities.
 
